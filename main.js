@@ -4,4 +4,4 @@ function first_button() {
     window.location.href = 'introduction.html';
 }
 
-document.getElementById('say_name').textContent = "Your name from this point on is " + name + ". Please put on your Moniter.";
+document.getElementById('say_name').innerHTML = "Your name from this point on is " + name + ". Please put on your Moniter.";
