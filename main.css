@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: red;
+}
+.choice_button {
+    display: flex;
+    width: 50;
+    height: 80;
+    justify-content: space-around;
+    background-color: blue;
+}
+#say_name {
+    color: green;
+}
