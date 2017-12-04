@@ -1,6 +1,6 @@
-var name="";
+var name;
 function first_button() {
-    var name = document.getElementById("name_select");
+    name = document.getElementById("name_select");
     window.location.href = 'introduction.html';
 }
 window.onload = function() {
