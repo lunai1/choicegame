@@ -9,8 +9,8 @@ body {
     background-color: blue;
 }
 #game-container {
-    background-color: #crimson;
-   border: 3px solid white;
+    background-color: crimson;
+   border: 3px solid black;
    margin: 0 auto;
    width: 80%;
    padding: 20px;
@@ -18,18 +18,20 @@ body {
    border-radius: 5px;
 }
 #story-container {
-    background-color: #a8ccd7;
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
-    width: 450px;
-    height: 600px;
+    background-color: #f6feff;
+   border: 3px solid black;
+   margin: 0 auto;
+   width: 80%;
+   padding: 20px;
+   text-align: center;
+   border-radius: 5px;
 }
 #button-container {
     background-color: green;
-    display: flex;
-    justify-content: center;
-    vertical-align: center;
-    width: 500px;
-    height: 1000px;
+    border: 3px solid black;
+   margin: 0 auto;
+   width: 80%;
+   padding: 20px;
+   text-align: center;
+   border-radius: 5px;
 }
