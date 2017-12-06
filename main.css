@@ -12,10 +12,10 @@ body {
     background-color: crimson;
    border: 3px solid black;
    margin: 0 auto;
-   width: 80%;
+   width: 70%;
    padding: 20px;
    text-align: center;
-   border-radius: 5px;
+   border-radius: 2px;
 }
 #story-container {
     background-color: #f6feff;
@@ -24,7 +24,7 @@ body {
    width: 80%;
    padding: 20px;
    text-align: center;
-   border-radius: 5px;
+   border-radius: 2px;
 }
 #button-container {
     background-color: green;
@@ -33,5 +33,5 @@ body {
    width: 80%;
    padding: 20px;
    text-align: center;
-   border-radius: 5px;
+   border-radius: 2px;
 }
