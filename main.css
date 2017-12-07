@@ -28,3 +28,6 @@ button {
     border: none;
     border-radius: 3px;
 }
+#name_submit {
+    font-family: fantasy;
+}
