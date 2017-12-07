@@ -1,13 +1,7 @@
 body {
     background-color: black;
 }
-.choice_button {
-    display: flex;
-    width: 50px;
-    height: 80px;
-    justify-content: space-around;
-    background-color: blue;
-}
+
 #game-container {
     background-color: crimson;
    border: 3px solid black;
