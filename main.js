@@ -16,11 +16,11 @@ function c1() {
 }
 function c2() {
   text.innerHTML = "<h1>You break out of the line,</h1><h3> sprinting behind the line of people. There are<h3 class='highlight'> 3</h3> doors in front of you, but you have to choose quickly.</h3><h2> The guards are shooting!</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='c4()'>DOOR 1</button><button class='choice_button' onclick='c5()'>DOOR 2</button><button class='choice_button' onclick='c6()'>DOOR 3</button> ";  
+  button.innerHTML = "<button class='choice_button' onclick='c4()'>DOOR 1</button><button class='choice_button' onclick='c5()'>DOOR 2</button><button class='choice_button' onclick='c6()'>DOOR 3</button> ";
 }
 function c3() {
   text.innerHTML = "<h1>He then gives you a watch,</h1><h3> with a holographic display and a dial on the side. He looks at you expectantly</h3><h2>Do you put on the watch?</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='c7()'>YES</button><button class='choice_button' onclick='c8()'>NO</button>";  
+  button.innerHTML = "<button class='choice_button' onclick='c7()'>YES</button><button class='choice_button' onclick='c8()'>NO</button>";
 }
 function c4() {
   text.innerHTML = "<h1>You run to the first door,</h1><h3> gun fire resounding after you. You wretch open the door, and slam it behind you. You hear a beeping behind you, and a lock slide into place. There is no going back. You can hear running echoing though the hallways.</h3><h2> Do you either run swiftly, or jog slowly and look for a hiding place?</h2>";
@@ -28,11 +28,11 @@ function c4() {
 }
 function c5() {
   text.innerHTML = "<h2>You make it to the second door,</h2><h3> wretching it open and closing it behind you. You here bullets clank of the door, then go silent. You then hear running echoing though the hallways.</h3><h2> Do you either run swiftly, or jog slowly and look for a hiding place?</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='c11()'>RUN FAST</button><button class='choice_button' onclick='c10()'>LOOK FOR HIDING PLACE</button>";
+  button.innerHTML = "<button class='choice_button' onclick='c11()'>RUN FAST</button><button class='choice_button' onclick='c12()'>LOOK FOR HIDING PLACE</button>";
 }
 function c6() {
-  text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>"  
-
+  text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
+  button.innerHTML = "<button class="gameover_button" onclick='pre()'>";
 }
 function c7() {}
 function c8() {}
@@ -41,4 +41,3 @@ function c10() {}
 function c11() {}
 function c12() {}
 function c13() {}
-
