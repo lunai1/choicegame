@@ -34,7 +34,9 @@ function c6() {
   text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
   button.innerHTML = "<button class='gameover_button' onclick='pre()'>PLAY AGAIN</button>";
 }
-function c7() {}
+function c7() {
+  text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3>"
+}
 function c8() {}
 function c9() {}
 function c10() {}
