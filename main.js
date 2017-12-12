@@ -35,7 +35,8 @@ function c6() {
   button.innerHTML = "<button class='gameover_button' onclick='pre()'>PLAY AGAIN</button>";
 }
 function c7() {
-  text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3>"
+  text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
+  button.innerHTML = "<button 	q1a >"  
 }
 function c8() {}
 function c9() {}
