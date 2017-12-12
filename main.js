@@ -40,7 +40,7 @@ function c7() {
   text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
   button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"  
 }
-function c8() {
+function c13() {
   text.innerHTML = "<h2>The guard then pulls you over to a table,</h2><h3> which has two buttons. Above the buttons are holograms of a Compound Bow, and that of a Machete.</h3><h2> Choose your weapon.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";  
 }
@@ -55,4 +55,4 @@ function c9() {}
 function c10() {}
 function c11() {}
 function c12() {}
-function c13() {}
+function c8() {}
