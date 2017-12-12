@@ -1,4 +1,6 @@
-var name
+var name;
+var weapon;
+var armor;
 var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
 function pre() {
@@ -43,9 +45,11 @@ function c8() {
   button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";  
 }
 function bowPick() {
-     
+    weapon = "starterCompoundBow";
+    armor = "basicArmor";
     text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and forces it on to you.</h3>";
-  
+    button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
+    console.log(weapon, armor);
 }
 function c9() {}
 function c10() {}
