@@ -59,7 +59,7 @@ function c9() {
   console.log(weapon, armor);
 }
 function c8() {
-  text.innerHTML = "<h2>You shake your head at the guard,</h2><h3> but then he grabs you by the neck, forcing you onto the table and putting on the cuffs, then letting you go.</h3>";
+  text.innerHTML = "<h2>You shake your head at the guard,</h2><h3> but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go.</h3>";
 }
 function c10() {}
 function c11() {}
