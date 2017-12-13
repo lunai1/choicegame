@@ -38,21 +38,29 @@ function c6() {
 }
 function c7() {
   text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
-  button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"  
+  button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
 }
 function c13() {
   text.innerHTML = "<h2>The guard then pulls you over to a table,</h2><h3> which has two buttons. Above the buttons are holograms of a Compound Bow, and that of a Machete.</h3><h2> Choose your weapon.</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";  
+  button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";
 }
 function bowPick() {
     weapon = "starterCompoundBow";
     armor = "basicArmor";
-    text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and forces it on to you.</h3>";
+    text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
     button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
     console.log(weapon, armor);
 }
-function c9() {}
+function c9() {
+  weapon = "starterMachette";
+  armor = "basicArmor";
+  text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a sharp machette is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
+  button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
+  console.log(weapon, armor);
+}
+function c8() {
+  text.innerHTML = "<h2>You shake your head at the guard,</h2><h3> but then he grabs you by the neck, forcing you onto the table and putting on the cuffs, then letting you go.</h3>";
+}
 function c10() {}
 function c11() {}
 function c12() {}
-function c8() {}
