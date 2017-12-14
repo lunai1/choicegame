@@ -23,41 +23,95 @@ function start() {
 function c1() {
   text.innerHTML = '<h1>You choose to stay in line</h1><h3>A woman walks out of a door in front of you. She has no hair and her eyes are like lazers,<br>boring holes through the prisoners. Her eyes reach you and keep on going. Then she walks over to the start of the line<br>and walks along, staring daggers into the prisoners. She reaches you then continues on. She stops at the person three away from you.<br>She looks at the rest without moving, then walks away from the line, then says to  a nearby guard, \"Cull them.\"<br>He gives a signal, and the guards drag the people that weren\'t approved into a room, where the survivors could hear screaming and shooting. <br>  The woman walks out of the room, and the guards move down the line, providing names and clothes.<br>The guards reach you and give you clothes and say,</h3><h2> Your name from now on is ' + name + '.';
   button.innerHTML = "<button class='choice_button' onclick='c3()'>...</button>";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c2() {
   text.innerHTML = "<h1>You break out of the line,</h1><h3> sprinting behind the line of people. There are<h3 class='highlight'> 3</h3> doors in front of you, but you have to choose quickly.</h3><h2> The guards are shooting!</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c4()'>DOOR 1</button><button class='choice_button' onclick='c5()'>DOOR 2</button><button class='choice_button' onclick='c6()'>DOOR 3</button> ";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c3() {
   text.innerHTML = "<h1>He then gives you a watch,</h1><h3> with a holographic display and a dial on the side. He looks at you expectantly</h3><h2>Do you put on the watch?</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c7()'>YES</button><button class='choice_button' onclick='c8()'>NO</button>";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c4() {
   text.innerHTML = "<h1>You run to the first door,</h1><h3> gun fire resounding after you. You wretch open the door, and slam it behind you. You hear a beeping behind you, and a lock slide into place. There is no going back. You can hear running echoing though the hallways.</h3><h2> Do you either run swiftly, or jog slowly and look for a hiding place?</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c9()'>RUN FAST</button><button class='choice_button' onclick='c10()'>LOOK FOR HIDING PLACE</button>";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c5() {
   text.innerHTML = "<h2>You make it to the second door,</h2><h3> wretching it open and closing it behind you. You here bullets clank of the door, then go silent. You then hear running echoing though the hallways.</h3><h2> Do you either run swiftly, or jog slowly and look for a hiding place?</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c11()'>RUN FAST</button><button class='choice_button' onclick='c12()'>LOOK FOR HIDING PLACE</button>";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c6() {
   text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
   button.innerHTML = "<button class='gameover_button' onclick='weapon = false;armor = false;moniter = false; pre();'>PLAY AGAIN</button>";
+ if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c7() {
   moniter = true;
   text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
   button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c13() {
   text.innerHTML = "<h2>The guard then pulls you over to a table,</h2><h3> which has two buttons. Above the buttons are holograms of a Compound Bow, and that of a Machete.</h3><h2> Choose your weapon.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function bowPick() {
     weapon = "Starter Compound Bow";
     armor = "Basic Armor";
     text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
     button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
+    if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
     console.log(weapon, armor);
 }
 function c9() {
@@ -66,11 +120,23 @@ function c9() {
   text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a sharp machette is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
   button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
   console.log(weapon, armor);
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c8() {
   moniter = true;
   text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c15'>...</button>"
+  if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+    }
 }
 function c10() {}
 function c11() {}
