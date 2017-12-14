@@ -15,7 +15,8 @@ function start() {
     if(weapon.value == false && armor.value == false) {
         inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
     }else {
-            inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
     }
     button.innerHTML = "<button class='choice_button' onclick='c1()'>STAY</button><button class='choice_button' onclick='c2()'>ESCAPE</button>";
 }
@@ -54,14 +55,14 @@ function c13() {
 }
 function bowPick() {
     weapon = "Starter Compound Bow";
-    armor = "basicArmor";
+    armor = "Basic Armor";
     text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
     button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
     console.log(weapon, armor);
 }
 function c9() {
   weapon = "Starter Machette";
-  armor = "basicArmor";
+  armor = "Basic Armor";
   text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a sharp machette is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
   button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
   console.log(weapon, armor);
