@@ -4,6 +4,7 @@ var weapon;
 var armor;
 var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
+var inventory = document.getElementById('inventory_container');
 function pre() {
     text.innerHTML = 'WELCOME TO GLASS COFFIN.<br>This is a choice led game, so choose wisely.<br> <input type="text" id="name_select"  placeholder="Choose Your Name" required/>';
     button.innerHTML = "<button id='name_submit' onclick='start()'>START</button>";
@@ -11,6 +12,11 @@ function pre() {
 function start() {
     name = document.getElementById('name_select').value;
     text.innerHTML = "<h1>You wake up in a glass coffin.</h1><h3>You can\'t remember your name.</h3><h3>You have no idea who you are, how you got here, or what is happening</h3><h3>The coffin has opaque sides, but the front is transparent glass, and as you look around,<br>you realize that there are others looking around, or hitting the glass, or sitting with a dazed look.</h3><h2>Suddenly the front panel of all the coffins crash down, and guards swarm you, dragging you into a line of people who have been in the coffins. You are naked and cold, and there is a pile of clothes on the table, but is is surrounded by guards</h2><h2>Do stay in the line or try to escape?</h2>";
+    if(weapon.value == false && armor.value == false) {
+        inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
+    }else {
+            inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+    }
     button.innerHTML = "<button class='choice_button' onclick='c1()'>STAY</button><button class='choice_button' onclick='c2()'>ESCAPE</button>";
 }
 function c1() {
@@ -35,7 +41,7 @@ function c5() {
 }
 function c6() {
   text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
-  button.innerHTML = "<button class='gameover_button' onclick='pre()'>PLAY AGAIN</button>";
+  button.innerHTML = "<button class='gameover_button' onclick='weapon = false;armor = false;moniter = false; pre();'>PLAY AGAIN</button>";
 }
 function c7() {
   moniter = true;
@@ -47,14 +53,14 @@ function c13() {
   button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";
 }
 function bowPick() {
-    weapon = "starterCompoundBow";
+    weapon = "Starter Compound Bow";
     armor = "basicArmor";
     text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
     button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
     console.log(weapon, armor);
 }
 function c9() {
-  weapon = "starterMachette";
+  weapon = "Starter Machette";
   armor = "basicArmor";
   text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a sharp machette is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
   button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
