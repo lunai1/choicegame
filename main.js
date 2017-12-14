@@ -1,3 +1,4 @@
+var moniter = false;
 var name;
 var weapon;
 var armor;
@@ -37,6 +38,7 @@ function c6() {
   button.innerHTML = "<button class='gameover_button' onclick='pre()'>PLAY AGAIN</button>";
 }
 function c7() {
+  moniter = true;
   text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
   button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
 }
@@ -59,7 +61,9 @@ function c9() {
   console.log(weapon, armor);
 }
 function c8() {
-  text.innerHTML = "<h2>You shake your head at the guard,</h2><h3> but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go.</h3>";
+  moniter = true;
+  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go.</h2>";
+  button.innerHTML = "<button class='choice_button' onclick='c15'>...</button>"
 }
 function c10() {}
 function c11() {}
