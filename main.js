@@ -9,9 +9,16 @@ function invent() {
    if(weapon == false && armor == false && moniter = false) {
         inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
     }else {
+        if(weapon == false) {
+            inventory.innerHTMl = "You don't have any weapons.";
+        } else {
+            inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
+        }if(armor== false) {
+            inventory.innerHTMl = "You don't have any armor.";
+        } else {
+            inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
+        }
         
-        inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
-        inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
     }
 }
 function pre() {
