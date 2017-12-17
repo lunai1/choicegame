@@ -1,25 +1,44 @@
 var moniter = false;
 var name;
-var weapon = false;
-var armor = false;
+var armor_bool = false;
+var weapon_bool = false;
+var weapon;
+var moniter_addon_number = 0;
+var armor;
 var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
 var inventory = document.getElementById('inventory_container');
 function invent() {
-   if(weapon == false && armor == false && moniter = false) {
+   if(weapon_bool == false && armor_bool == false && moniter == false) {
         inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
-    }else {
-        if(weapon == false) {
-            inventory.innerHTMl = "You don't have any weapons.";
-        } else {
-            inventory.innerHTML = "you have a <b>" + weapon + "</b>.";
-        }if(armor== false) {
-            inventory.innerHTMl = "You don't have any armor.";
-        } else {
-            inventory.innerHTMl = "You have some <b>" + armor + "</b>.";
-        }
-        
+    }else if(weapon_bool == false && armor_bool == false && moniter == true) {
+      inventory.innerHTML = "You have <b>" + moniter_addon_number + "</b> Moniter add-ons";
+    }else if(weapon_bool == false && armor_bool == true) {
+      inventory.innerHTML = "You don't have a weapon.<br>You have some <b>" + armor + "</b>.<br>";
+      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
+    }else if (weapon_bool == true && armor_bool == false) {
+      inventory.innerHTML = "You have a <b>" + weapon + "</b>.<br>You have no armor.<br>";
+      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
+    }else if (weapon_bool == true && armor_bool == true) {
+      inventory.innerHTML = "You have a <b>" + weapon + "</b>.<br>You have some <b>" + armor + "</b>.<br>";
+      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
     }
+
+    // //else {
+    //   //  if(weapon == false) {
+    //         inventory.innerHTMl = "You don't have any weapons.";
+    //     } else {
+    //         inventory.innerHTML = "you have a <b>" + weapon.value + "</b>.";
+    //     }if(armor == false) {
+    //         inventory.innerHTMl += "You don't have any armor.";
+    //     } else {
+    //         inventory.innerHTMl += "You have some <b>" + armor.value + "</b>.";
+    //     }
+    //     if(moniter == true) {
+    //       inventory.innerHTML += "You are wearing the Moniter.";
+    //       inventory.innerHTML += "You have " + moniter_addon_number + " Moniter upgrades.";
+    //     }
+  //}
 }
 function pre() {
     text.innerHTML = 'WELCOME TO GLASS COFFIN.<br>This is a choice led game, so choose wisely.<br> <input type="text" id="name_select"  placeholder="Choose Your Name" required/>';
@@ -58,7 +77,7 @@ function c5() {
 }
 function c6() {
   text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
-  button.innerHTML = "<button class='gameover_button' onclick='weapon = null;armor = null;moniter = null; pre();'>PLAY AGAIN</button>";
+  button.innerHTML = "<button class='gameover_button' onclick='weapon = false;armor = false;moniter = false; pre();'>PLAY AGAIN</button>";
  invent();
 }
 function c7() {
@@ -75,12 +94,16 @@ function c13() {
 function bowPick() {
     weapon = "Starter Compound Bow";
     armor = "Basic Armor";
+    weapon_bool = true;
+    armor_bool = true;
     text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a silvery compound bow is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
     button.innerHTML = "<button class='choice_button' onclick='c14()'>...</button>";
     invent();
     console.log(weapon, armor);
 }
-function c9() {
+function swordPick() {
+  weapon_bool = true;
+  armor_bool = true;
   weapon = "Starter Machette";
   armor = "Basic Armor";
   text.innerHTML = "<h2>You press the button,</h2><h3> and after a moment, a compartment opens up and a sharp machette is drawn out by the guards. He then gives you some armor and your new weapon.</h3>";
@@ -90,10 +113,11 @@ function c9() {
 }
 function c8() {
   moniter = true;
-  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go.</h2>";
+  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go. You look at the guard irritably, but then suddenly collapse in pain as glowing lines of light trace themselves in your veins</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c15'>...</button>"
   invent();
 }
+function c9() {}
 function c10() {}
 function c11() {}
 function c12() {}
