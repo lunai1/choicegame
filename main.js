@@ -139,3 +139,16 @@ function c12() {
   text.innerHTML = "<h2>You look for a good hiding spot as you jog down the corridor. You speed up as you hear the guards approaching. No matter how hard you look, you can't seem to find a hiding spot. Suddenly you feel a bullet rip through your shoulder, and you stumble to the ground. you roll over to find a masked guard point a gun at your head. Game Over</h2>";
   button.innerHTML = "<button class='gameover_button' onclick='gameOver()'>PLAY AGAIN</button>";
 }
+function c14() {
+   text.innerHTML = "<h2>The guards pull you over to a big cafeteria,</h2><h3>where people mill around talking with each other. Towards the back of the cafeteria you can see a door to a training room</h3>";
+   button.innerHTML = "<button class='choice_button' onclick='social1()'>SOCIALIZE</button><button class='choice_button' onclick='train1()'>TRAIN</button>";
+}
+function social1() {
+   text.innerHTML = "<h2>You head</h2>";
+}
+function train1() {}
+function c15() {}
+function c16() {}
+function c17() {}
+function c18() {}
+function c19() {}
