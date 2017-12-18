@@ -144,7 +144,7 @@ function c14() {
    button.innerHTML = "<button class='choice_button' onclick='social1()'>SOCIALIZE</button><button class='choice_button' onclick='train1()'>TRAIN</button>";
 }
 function social1() {
-   text.innerHTML = "<h2>You head</h2>";
+   text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have</h2>";
 }
 function train1() {}
 function c15() {}
