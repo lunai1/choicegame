@@ -40,6 +40,12 @@ function invent() {
     //     }
   //}
 }
+function gameOver() {
+  weapon = false;
+  armor = false;
+  moniter = false;
+  pre();
+}
 function pre() {
     text.innerHTML = 'WELCOME TO GLASS COFFIN.<br>This is a choice led game, so choose wisely.<br> <input type="text" id="name_select"  placeholder="Choose Your Name" required/>';
     button.innerHTML = "<button id='name_submit' onclick='start()'>START</button>";
@@ -77,7 +83,7 @@ function c5() {
 }
 function c6() {
   text.innerHTML = "<h2>You make it to the third door, wretching it open and slamming it behind you. You look around, and realize that your trapped in a glorified closet. You hear the guards open the door, and you rush them in desperation, but they shoot you down.</h2>";
-  button.innerHTML = "<button class='gameover_button' onclick='weapon = false;armor = false;moniter = false; pre();'>PLAY AGAIN</button>";
+  button.innerHTML = "<button class='gameover_button' onclick='gameOver();'>PLAY AGAIN</button>";
  invent();
 }
 function c7() {
@@ -113,11 +119,23 @@ function swordPick() {
 }
 function c8() {
   moniter = true;
-  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go. You look at the guard irritably, but then suddenly collapse in pain as glowing lines of light trace themselves in your veins</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='c15'>...</button>"
+  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go. You look at the guard irritably, but then suddenly collapse in pain as glowing lines of light trace themselves in your veins. You are now hooked up to the moniter.</h2>";
+  button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
   invent();
 }
-function c9() {}
-function c10() {}
-function c11() {}
-function c12() {}
+function c9() {
+  text.innerHTML = "<h2>You sprint down the halls, but then you notice that there are hallways branching of to the side. Do you keep going down the hallway, take the left exit, or take the right exit?</h2>";
+  button.innerHTML = "<button class='choice_button' onclick='c15()'>LEFT EXIT</button><button class='choice_button' onclick='c16()'>KEEP GOING</button><button class='choice_button' onclick='c17()'>RIGHT EXIT</button>";
+}
+function c10() {
+  text.innerHTML = "<h2>You decide that it would be better to wait it out in a nice hiding spot,</h2> so you walk down the hallway looking for anything that could serve. As you're jogging, you come across a space where you can climb up into a hollow between some pipes. You climb up and wait for the guards to come. A few minutes later, you hear marching, and 2 guards come into sight. Do you jump down and try to fight them, or wait for them to pass?";
+  button.innerHTML = "<button class='choice_button' onclick='c18()'>FIGHT</button><button class='choice_button' onclick='c19()'>WAIT</button>";
+}
+function c11() {
+  text.innerHTML = "<h2>You sprint down the halls, but you can hear the guards coming.</h2><h3>Suddenly, you see a hallway branching out to the left.</h3><h2>Do you keep going or do you take the exit.</h2>";
+  button.innerHTML = "<button class='choice_button' onclick='c19()'>KEEP GOING</button><button class='choice_button' onclick='c20()'>TAKE THE EXIT</button>";
+}
+function c12() {
+  text.innerHTML = "<h2>You look for a good hiding spot as you jog down the corridor. You speed up as you hear the guards approaching. No matter how hard you look, you can't seem to find a hiding spot. Suddenly you feel a bullet rip through your shoulder, and you stumble to the ground. you roll over to find a masked guard point a gun at your head. Game Over</h2>";
+  button.innerHTML = "<button class='gameover_button' onclick='gameOver()'>PLAY AGAIN</button>";
+}
