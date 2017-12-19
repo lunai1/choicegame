@@ -5,6 +5,9 @@ var weapon_bool = false;
 var weapon;
 var moniter_addon_number = 0;
 var armor;
+var socialPt = 0;
+var trainPt = 0;
+var random_points = Math.floor( Math.random() * 3 )
 var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
 var inventory = document.getElementById('inventory_container');
@@ -39,6 +42,10 @@ function invent() {
     //       inventory.innerHTML += "You have " + moniter_addon_number + " Moniter upgrades.";
     //     }
   //}
+   if(socialPt > 0 || trainPt > 0) {
+      inventory.innerHTML += "You have " + socialPt + " social points.";
+      inventory.innerHTML += "You have " + trainPt + " training points";
+   }
 }
 function gameOver() {
   weapon = false;
@@ -144,9 +151,16 @@ function c14() {
    button.innerHTML = "<button class='choice_button' onclick='social1()'>SOCIALIZE</button><button class='choice_button' onclick='train1()'>TRAIN</button>";
 }
 function social1() {
-   text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have</h2>";
+   random_points = Math.floor( Math.random() * 3 )
+   text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have gained"+random_points+" points for socializing</h2>";
+   button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
+   socialPt += random_points;
+   invent()
 }
 function train1() {}
+function cafeteria() {
+   
+}
 function c15() {}
 function c16() {}
 function c17() {}
