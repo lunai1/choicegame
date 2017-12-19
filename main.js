@@ -24,26 +24,10 @@ function invent() {
       inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
     }else if (weapon_bool == true && armor_bool == true) {
       inventory.innerHTML = "You have a <b>" + weapon + "</b>.<br>You have some <b>" + armor + "</b>.<br>";
-      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
+      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.<br>";
     }
-
-    // //else {
-    //   //  if(weapon == false) {
-    //         inventory.innerHTMl = "You don't have any weapons.";
-    //     } else {
-    //         inventory.innerHTML = "you have a <b>" + weapon.value + "</b>.";
-    //     }if(armor == false) {
-    //         inventory.innerHTMl += "You don't have any armor.";
-    //     } else {
-    //         inventory.innerHTMl += "You have some <b>" + armor.value + "</b>.";
-    //     }
-    //     if(moniter == true) {
-    //       inventory.innerHTML += "You are wearing the Moniter.";
-    //       inventory.innerHTML += "You have " + moniter_addon_number + " Moniter upgrades.";
-    //     }
-  //}
    if(socialPt > 0 || trainPt > 0) {
-      inventory.innerHTML += "You have " + socialPt + " social points.";
+      inventory.innerHTML += "You have " + socialPt + " social points.<br>";
       inventory.innerHTML += "You have " + trainPt + " training points";
    }
 }
@@ -152,7 +136,7 @@ function c14() {
 }
 function social1() {
    random_points = Math.floor( Math.random() * 3 )
-   text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have gained"+random_points+" points for socializing</h2>";
+   text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have gained "+random_points+" points for socializing</h2>";
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
    socialPt += random_points;
    invent()
