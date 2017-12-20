@@ -27,8 +27,8 @@ function invent() {
       inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.<br>";
     }
    if(socialPt > 0 || trainPt > 0) {
-      inventory.innerHTML += "You have " + socialPt + " social points.<br>";
-      inventory.innerHTML += "You have " + trainPt + " training points";
+      inventory.innerHTML += "You have <b>" + socialPt + "</b> social points.<br>";
+      inventory.innerHTML += "You have <b>" + trainPt + "</b> training points";
    }
 }
 function gameOver() {
@@ -117,33 +117,42 @@ function c8() {
 function c9() {
   text.innerHTML = "<h2>You sprint down the halls, but then you notice that there are hallways branching of to the side. Do you keep going down the hallway, take the left exit, or take the right exit?</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c15()'>LEFT EXIT</button><button class='choice_button' onclick='c16()'>KEEP GOING</button><button class='choice_button' onclick='c17()'>RIGHT EXIT</button>";
+  invent();
 }
 function c10() {
   text.innerHTML = "<h2>You decide that it would be better to wait it out in a nice hiding spot,</h2> so you walk down the hallway looking for anything that could serve. As you're jogging, you come across a space where you can climb up into a hollow between some pipes. You climb up and wait for the guards to come. A few minutes later, you hear marching, and 2 guards come into sight. Do you jump down and try to fight them, or wait for them to pass?";
   button.innerHTML = "<button class='choice_button' onclick='c18()'>FIGHT</button><button class='choice_button' onclick='c19()'>WAIT</button>";
+  invent();
 }
 function c11() {
   text.innerHTML = "<h2>You sprint down the halls, but you can hear the guards coming.</h2><h3>Suddenly, you see a hallway branching out to the left.</h3><h2>Do you keep going or do you take the exit.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c19()'>KEEP GOING</button><button class='choice_button' onclick='c20()'>TAKE THE EXIT</button>";
+   invent();
 }
 function c12() {
   text.innerHTML = "<h2>You look for a good hiding spot as you jog down the corridor. You speed up as you hear the guards approaching. No matter how hard you look, you can't seem to find a hiding spot. Suddenly you feel a bullet rip through your shoulder, and you stumble to the ground. you roll over to find a masked guard point a gun at your head. Game Over</h2>";
   button.innerHTML = "<button class='gameover_button' onclick='gameOver()'>PLAY AGAIN</button>";
+  invent();
 }
 function c14() {
    text.innerHTML = "<h2>The guards pull you over to a big cafeteria,</h2><h3>where people mill around talking with each other. Towards the back of the cafeteria you can see a door to a training room</h3>";
    button.innerHTML = "<button class='choice_button' onclick='social1()'>SOCIALIZE</button><button class='choice_button' onclick='train1()'>TRAIN</button>";
+   invent();
 }
 function social1() {
-   random_points = Math.floor( Math.random() * 3 )
+   random_points = Math.floor( Math.random() * 3 );
    text.innerHTML = "<h2>You head towards the milling crowds of people, introducing yourself and asking around. You have gained "+random_points+" points for socializing</h2>";
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
    socialPt += random_points;
    invent()
 }
-function train1() {}
+function train1() {
+   random_points = Math.floor( Math.random() * 3 );
+   text.innerHTML = "<h2>You walk towards the training room and begin your training with the " + weapon + ".<br> You have gained <b>" + random_points + "</b>.</h2>";
+}
 function cafeteria() {
-   
+   text.innerHTML = "<h2>You go to an empty table and sit around waiting for something to happen.</h2>";
+   button.innerHTML = "<button class='choice_button' onclick='social()'>SOCIALIZE</button><button class='choice_button' onclick='train()'>TRAIN</button>";
 }
 function c15() {}
 function c16() {}
