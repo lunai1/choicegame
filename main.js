@@ -166,7 +166,8 @@ function train() {
    }else if(weapon == "sword") {
       text.innerHTML = "<h2>You head over to the training room and start shooting at the dummy, aiming for the joints of the arms and legs, and shooting at the neck. You have gained " + random_points + " point in training.</h2>";
    }
-   button.innerHTML = "<button class='choice_button' onclick='cafeteria()' Go Back to Cafeteria"
+   button.innerHTML = "<button class='choice_button' onclick='cafeteria()' Go Back to Cafeteria</button>";
+   trainPT += random_points;
 }
 function c15() {}
 function c16() {}
