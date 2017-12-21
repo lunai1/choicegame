@@ -175,7 +175,7 @@ function train() {
    random_points = Math.floor( Math.random() * 4);
    if(weapon_type == "sword") {
       text.innerHTML = "<h2>You head back over to the training room and start hacking at the dummy with your sword, looking for various weak-spots that the training instructer taught you to look for. You have gained " + random_points +" points in training.</h2>";
-   }else if(weapon == "bow") {
+   }else if(weapon_type == "bow") {
       text.innerHTML = "<h2>You head over to the training room and start shooting at the dummy, aiming for the joints of the arms and legs, and shooting at the neck. You have gained " + random_points + " point in training.</h2>";
    }
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
