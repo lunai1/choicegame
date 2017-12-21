@@ -7,6 +7,7 @@ var moniter_addon_number = 0;
 var armor;
 var socialPt = 0;
 var trainPt = 0;
+var weapon_type;
 var random_points = Math.floor( Math.random() * 3 )
 var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
@@ -89,6 +90,7 @@ function c13() {
   invent();
 }
 function bowPick() {
+    weapon_type = "bow";
     weapon = "Starter Compound Bow";
     armor = "Basic Armor";
     weapon_bool = true;
@@ -99,6 +101,7 @@ function bowPick() {
     console.log(weapon, armor);
 }
 function swordPick() {
+  weapon_type = "sword";
   weapon_bool = true;
   armor_bool = true;
   weapon = "Starter Machette";
@@ -147,7 +150,7 @@ function social1() {
    invent()
 }
 function train1() {
-   random_points = Math.floor( Math.random() * 3 );
+   random_points = Math.floor( Math.random() * 4 );
    text.innerHTML = "<h2>You walk towards the training room and begin your training with the " + weapon + ".<br> You have gained <b>" + random_points + "</b>.</h2>";
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
    trainPt += random_points
@@ -155,6 +158,15 @@ function train1() {
 function cafeteria() {
    text.innerHTML = "<h2>You go to an empty table and sit around waiting for something to happen.</h2>";
    button.innerHTML = "<button class='choice_button' onclick='social()'>SOCIALIZE</button><button class='choice_button' onclick='train()'>TRAIN</button>";
+}
+function train() {
+   random_points = Math.floor( Math.random() * 4);
+   if(weapon_type == "bow") {
+      text.innerHTML = "<h2>You head back over to the training room and start hacking at the dummy with your sword, looking for various weak-spots that the training instructer taught you to look for. You have gained " + random_points +" points in training.</h2>";
+   }else if(weapon == "sword") {
+      text.innerHTML = "<h2>You head over to the training room and start shooting at the dummy, aiming for the joints of the arms and legs, and shooting at the neck. You have gained " + random_points + " point in training.</h2>";
+   }
+   button.innerHTML = "<button class='choice_button' onclick='cafeteria()' Go Back to Cafeteria"
 }
 function c15() {}
 function c16() {}
