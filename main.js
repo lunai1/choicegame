@@ -151,9 +151,10 @@ function social1() {
 }
 function train1() {
    random_points = Math.floor( Math.random() * 3);
-   text.innerHTML = "<h2>You walk towards the training room and begin your training with the " + weapon + ".<br> You have gained <b>" + random_points + "</b>.</h2>";
+   text.innerHTML = "<h2>You walk towards the training room and begin your training with the " + weapon + ".<br> You have gained <b>" + random_points + " points in training.</b>.</h2>";
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
-   trainPt += random_points
+   trainPt += random_points;
+   invent();
 }
 function cafeteria() {
    text.innerHTML = "<h2>You go to an empty table and sit around waiting for something to happen.</h2>";
