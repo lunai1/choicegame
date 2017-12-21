@@ -150,7 +150,7 @@ function social1() {
    invent()
 }
 function train1() {
-   random_points = Math.floor( Math.random() * 4 );
+   random_points = Math.floor( Math.random() * 3);
    text.innerHTML = "<h2>You walk towards the training room and begin your training with the " + weapon + ".<br> You have gained <b>" + random_points + "</b>.</h2>";
    button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
    trainPt += random_points
@@ -166,8 +166,16 @@ function train() {
    }else if(weapon == "sword") {
       text.innerHTML = "<h2>You head over to the training room and start shooting at the dummy, aiming for the joints of the arms and legs, and shooting at the neck. You have gained " + random_points + " point in training.</h2>";
    }
-   button.innerHTML = "<button class='choice_button' onclick='cafeteria()' Go Back to Cafeteria</button>";
-   trainPT += random_points;
+   button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
+   trainPt += random_points;
+   invent();
+}
+function social() {
+   random_points = Math.floor( Math.random() * 4);
+   text.innerHTML = "<h2>You head over to the milling crowds and start digging for information and making new connections. You have gained " + random_points + " points in socializing.</h2>";
+   button.innerHTML = "<button class='choice_button' onclick='cafeteria()'>Go Back to Cafeteria</button>";
+   socialPt += random_points;
+   invent();
 }
 function c15() {}
 function c16() {}
