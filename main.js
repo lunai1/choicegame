@@ -158,10 +158,10 @@ function train1() {
 }
 function cafeteria() {
    if(trainPt + socialPt >= 12) {
-      if(socialPt > 6) {
+      if(socialPt >= 7) {
          text.innerHTML = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. There is something that we have kept a secret, which is that we know a secret of the Higher Ups. The secret is that they have been experimenting with a new kind of weapon. this weapon is called Psy. We plan to use Psy to escape, but we don't know how. How about this. You go through a secret door that we have kept hidden from the guards and get this ability, and then you lead us to freedom. How about it?\"</h2>";
          button.innerHTML = "<button class='choice_button' onclick='c21()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
-      }else if(trainPt > 6) {
+      }else if(trainPt >= 7) {
          text.innerHTMl = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. We want to make a team of people who we have noticed excel with their weapon training. This team will be our bodyguards and the people who will disable the moniters. Whaddya say?\"</h2>";
          button.innerHTML = "<button class='choice_button' onclick='c23()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
 
