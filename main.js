@@ -1,9 +1,9 @@
-var moniter = false;
+var monitor = false;
 var name;
 var armor_bool = false;
 var weapon_bool = false;
 var weapon;
-var moniter_addon_number = 0;
+var monitor_addon_number = 0;
 var armor;
 var socialPt = 0;
 var trainPt = 0;
@@ -13,19 +13,19 @@ var text = document.getElementById('story-container');
 var button = document.getElementById('button-container');
 var inventory = document.getElementById('inventory_container');
 function invent() {
-   if(weapon_bool == false && armor_bool == false && moniter == false) {
+   if(weapon_bool == false && armor_bool == false && monitor == false) {
         inventory.innerHTML = '<h4>You don\'t have anything in your inventory!</h4>';
     }else if(weapon_bool == false && armor_bool == false && moniter == true) {
-      inventory.innerHTML = "You have <b>" + moniter_addon_number + "</b> Moniter add-ons";
+      inventory.innerHTML = "You have <b>" + monitor_addon_number + "</b> Monitor add-ons";
     }else if(weapon_bool == false && armor_bool == true) {
       inventory.innerHTML = "You don't have a weapon.<br>You have some <b>" + armor + "</b>.<br>";
-      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
+      inventory.innerHTML += "You have <b>" + monitor_addon_number + "</b> Monitor add-ons.";
     }else if (weapon_bool == true && armor_bool == false) {
       inventory.innerHTML = "You have a <b>" + weapon + "</b>.<br>You have no armor.<br>";
-      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.";
+      inventory.innerHTML += "You have <b>" + monitor_addon_number + "</b> Monitor add-ons.";
     }else if (weapon_bool == true && armor_bool == true) {
       inventory.innerHTML = "You have a <b>" + weapon + "</b>.<br>You have some <b>" + armor + "</b>.<br>";
-      inventory.innerHTML += "You have <b>" + moniter_addon_number + "</b> Moniter add-ons.<br>";
+      inventory.innerHTML += "You have <b>" + monitor_addon_number + "</b> Monitor add-ons.<br>";
     }
    if(socialPt > 0 || trainPt > 0) {
       inventory.innerHTML += "You have <b>" + socialPt + "</b> social points.<br>";
@@ -79,12 +79,13 @@ function c6() {
  invent();
 }
 function c7() {
-  moniter = true;
-  text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Moniter.</h2>"
+  monitor = true;
+  text.innerHTML = "<h2>You shrug, then put on the watch.</h2><h3> As you're inspecting the watch, a searing pain radiates from your wrist. As you look in horror, glowing lines trace themselves into your veins.</h3><h2>You are now hooked up to the Monitor.</h2>"
   button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
   invent();
 }
 function c13() {
+  monitor = true;
   text.innerHTML = "<h2>The guard then pulls you over to a table,</h2><h3> which has two buttons. Above the buttons are holograms of a Compound Bow, and that of a Machete.</h3><h2> Choose your weapon.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='bowPick()'>COMPOUND BOW</button><button class='choice_button' onclick='swordPick()'>MACHETTE</button>";
   invent();
@@ -113,7 +114,7 @@ function swordPick() {
 }
 function c8() {
   moniter = true;
-  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go. You look at the guard irritably, but then suddenly collapse in pain as glowing lines of light trace themselves in your veins. You are now hooked up to the moniter.</h2>";
+  text.innerHTML = "<h2>You shake your head at the guard, but then he grabs you by the neck, forcing you onto the table and putting on the watch, then letting you go. You look at the guard irritably, but then suddenly collapse in pain as glowing lines of light trace themselves in your veins. You are now hooked up to the Moniter.</h2>";
   button.innerHTML = "<button class='choice_button' onclick='c13()'>...</button>"
   invent();
 }
@@ -129,7 +130,7 @@ function c10() {
 }
 function c11() {
   text.innerHTML = "<h2>You sprint down the halls, but you can hear the guards coming.</h2><h3>Suddenly, you see a hallway branching out to the left.</h3><h2>Do you keep going or do you take the exit.</h2>";
-  button.innerHTML = "<button class='choice_button' onclick='c19()'>KEEP GOING</button><button class='choice_button' onclick='c20()'>TAKE THE EXIT</button>";
+  button.innerHTML = "<button class='choice_button' onclick='c20()'>KEEP GOING</button><button class='choice_button' onclick='c21()'>TAKE THE EXIT</button>";
    invent();
 }
 function c12() {
@@ -160,11 +161,11 @@ function cafeteria() {
    if(trainPt + socialPt >= 12) {
       if(socialPt >= 7 || trainPt < 6) {
          text.innerHTML = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. There is something that we have kept a secret, which is that we know a secret of the Higher Ups. The secret is that they have been experimenting with a new kind of weapon. this weapon is called Psy. We plan to use Psy to escape, but we don't know how. How about this. You go through a secret door that we have kept hidden from the guards and get this ability, and then you lead us to freedom. How about it?\"</h2>";
-         button.innerHTML = "<button class='choice_button' onclick='c21()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
+         button.innerHTML = "<button class='choice_button' onclick='c22()'>SURE</button>";
          invent();
       }else if(trainPt >= 7 || socialPt < 6) {
          text.innerHTMl = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. We want to make a team of people who we have noticed excel with their weapon training. This team will be our bodyguards and the people who will disable the moniters. Whaddya say?\"</h2>";
-         button.innerHTML = "<button class='choice_button' onclick='c23()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
+         button.innerHTML = "<button class='choice_button' onclick='c23()'>SURE</button>";
          invent();
       } 
    }else {
@@ -194,15 +195,23 @@ function social() {
 function c15() {}
 function c16() {}
 function c17() {}
-function c18() {}
+function c18() {
+   text.innerHTML = "You wait until they are just under you, then drop onto their heads. However, your severe lack of fighting skills and no weapons makes it childs play for the guards to kill you.";
+   button.innerHTML = "<button class='gameover_button' onclick='gameOver()'>PLAY AGAIN</button>";
+}
 function c19() {}
 function c20() {}
-function c21() {
+function c21() {}
+function c22() {
    text.innerHTML = "<h2> The man gives you a small grin, then leads your eye to a small vent in the corner. The screws are slightly loose.</br> \"Go soon, before they notice and close up the vents. Good Luck.\"<h2>";
-   button.innerHTML = "<button class='choice_button' onclick='c24()'>Go through the vent.</button>";
-   invent()
+   button.innerHTML = "<button class='choice_button' onclick='c23()'>Go through the vent.</button>";
+   invent();
 }
-function c22() {}
-function c23() {}
+function c23() {
+   text.innerHTML = "<h2>\"Welcome to the team! The group is over by the third table. Don't look so anxious, they don't bite.\"</h2>";
+   button.innerHTML = "<button class='choice_button' onclick='()'>Go over</button>";
+   invent();
+}
 function c24() {}
+function c25() {}
 
