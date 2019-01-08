@@ -195,7 +195,11 @@ function c17() {}
 function c18() {}
 function c19() {}
 function c20() {}
-function c21() {}
+function c21() {
+   text.innerHTML = "<h2> The man gives you a small grin, then leads your eye to a small vent in the corner. The screws are slightly loose.</br> \"Go soon, before they notice and close up the vents. Good Luck.\"<h2>";
+   button.innerHTML = "<button class='choice_button' onclick='c24()'>Go through the vent.</button>"
+}
 function c22() {}
-
+function c23() {}
+function c24() {}
 
