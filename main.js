@@ -204,14 +204,18 @@ function c20() {}
 function c21() {}
 function c22() {
    text.innerHTML = "<h2> The man gives you a small grin, then leads your eye to a small vent in the corner. The screws are slightly loose.</br> \"Go soon, before they notice and close up the vents. Good Luck.\"<h2>";
-   button.innerHTML = "<button class='choice_button' onclick='c23()'>Go through the vent.</button>";
+   button.innerHTML = "<button class='choice_button' onclick='c24()'>Go through the vent.</button>";
    invent();
 }
 function c23() {
    text.innerHTML = "<h2>\"Welcome to the team! The group is over by the third table. Don't look so anxious, they don't bite.\"</h2>";
-   button.innerHTML = "<button class='choice_button' onclick='()'>Go over</button>";
+   button.innerHTML = "<button class='choice_button' onclick='c25()'>Go over</button>";
    invent();
 }
-function c24() {}
+function c24() {
+   text.innerHTML = "<h2>The man backs off, and walks to a group over by the third table. He talks intensely with them, looking excited, then all of the group members look at you, silently cheering you on. The guards finally look away and you quickly unscrew the vent cover and pull yourself in. Looking back uncomfortably, you see a group member coming to screw the vent back on.</br> \"Good luck.\"</br>You continue down the dusty vent, the light receding behind you.</h2>";
+   button.innerHTML = "<button class='choice_button' onclick='c26()'></button>";
+   invent();
+}
 function c25() {}
 
