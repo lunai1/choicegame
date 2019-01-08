@@ -161,14 +161,16 @@ function cafeteria() {
       if(socialPt >= 7 || trainPt < 6) {
          text.innerHTML = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. There is something that we have kept a secret, which is that we know a secret of the Higher Ups. The secret is that they have been experimenting with a new kind of weapon. this weapon is called Psy. We plan to use Psy to escape, but we don't know how. How about this. You go through a secret door that we have kept hidden from the guards and get this ability, and then you lead us to freedom. How about it?\"</h2>";
          button.innerHTML = "<button class='choice_button' onclick='c21()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
+         invent();
       }else if(trainPt >= 7 || socialPt < 6) {
          text.innerHTMl = "<h2>A man walks over to the table you usually sit at. He sits down.\" It's " + name + " right? Yeah. So I have a proposal. We want to make a team of people who we have noticed excel with their weapon training. This team will be our bodyguards and the people who will disable the moniters. Whaddya say?\"</h2>";
          button.innerHTML = "<button class='choice_button' onclick='c23()'>SURE</button><button class='choice_button' onclick='c22()'>NO THANKS</button>";
-
+         invent();
       } 
    }else {
       text.innerHTML = "<h2>You go to an empty table and sit around waiting for something to happen.</h2>";
       button.innerHTML = "<button class='choice_button' onclick='social()'>SOCIALIZE</button><button class='choice_button' onclick='train()'>TRAIN</button>";
+      invent();
    }
 }
 function train() {
@@ -197,7 +199,8 @@ function c19() {}
 function c20() {}
 function c21() {
    text.innerHTML = "<h2> The man gives you a small grin, then leads your eye to a small vent in the corner. The screws are slightly loose.</br> \"Go soon, before they notice and close up the vents. Good Luck.\"<h2>";
-   button.innerHTML = "<button class='choice_button' onclick='c24()'>Go through the vent.</button>"
+   button.innerHTML = "<button class='choice_button' onclick='c24()'>Go through the vent.</button>";
+   invent()
 }
 function c22() {}
 function c23() {}
